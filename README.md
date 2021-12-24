@@ -7,7 +7,7 @@ preseed.cfg(包括DD),虽然方便,但是增加了很多无用的东西,在我�
 原理很简单,挂载一个tmpfs用来换根,把rootfs里面的文件解压到tmpfs,然后用
 systemctl switch-root,说到换根,简单说说,systemctl 的 switch-root 与 util-linux中的
 switch_root区别,也没啥很大区别,后者在换根的时候会检查原始根对应的文件系统(tmpfs/ramfs),
-前者不会,这就导致使用后者换根的时候报错(正常的linux都会装到硬盘上).
+前者不会,这就导致使用后者换根的时候报错(正常的linux都会装到硬盘上);逆向换根,
 然而换根也是秒换的.
 
 如果不是特别懒的人,建议尝试这个.
