@@ -4,6 +4,6 @@
  mount -t tmpfs rootfs -o size=100% $DIR
  
 cd $DIR 
-wget -O- 'https://github.com/cnddy/ostool/releases/download/1.0/alpine-rootfs.tar.gz' | gunzip -c | cpio --verbose -id
+wget -qO- 'https://github.com/cnddy/ostool/releases/download/1.0/alpine-rootfs.tar.gz' | gunzip -c | cpio --verbose -id
  
 systemctl --no-block switch-root $DIR $INIT
