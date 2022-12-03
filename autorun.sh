@@ -4,6 +4,6 @@
  mount -t tmpfs rootfs -o size=100% $DIR
  
 cd $DIR 
-wget -qO- 'https://github.com/Janxget/Eiroot/releases/download/11.0/alpine-rootfs.tar.gz' | tar -xzv
+wget -qO- 'https://github.com/Janxget/Eiroot/releases/download/11.0/alpine-rootfs.tar.gz' | tar -xz
  
 systemctl --no-block switch-root $DIR $INIT
