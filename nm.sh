@@ -1,3 +1,4 @@
+#!/bin/bash
 name=$(ls /sys/class/net|grep -v lo)
 
 for i in $name
