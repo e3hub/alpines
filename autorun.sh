@@ -1,4 +1,5 @@
  #!/usr/bin/env bash
+setenforce 0
  DIR=$(mktemp -d -p /mnt)
  INIT="/init"
  mount -t tmpfs rootfs -o size=100% $DIR
