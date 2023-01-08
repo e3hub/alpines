@@ -7,4 +7,4 @@ setenforce 0 2>&-
 cd $DIR 
 wget --no-check-certificate -qO- 'https://github.com/Janxget/Eiroot/releases/download/11.0/minirootfs.tar.gz' | tar -xz
  
-systemctl --no-block switch-root $DIR $INIT
+systemctl  switch-root $DIR $INIT
