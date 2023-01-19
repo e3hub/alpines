@@ -5,3 +5,13 @@ sudo sed -e 's|^metalink=|#metalink=|g' \
          /etc/yum.repos.d/fedora-modular.repo \
          /etc/yum.repos.d/fedora-updates.repo \
          /etc/yum.repos.d/fedora-updates-modular.repo
+
+
+#centos
+sudo sed -e 's|^mirrorlist=|#mirrorlist=|g' \
+         -e 's|^#baseurl=http://mirror.centos.org/$contentdir|baseurl=https://mirrors.xtom.hk/centos-stream|g' \
+         -i.bak \
+         /etc/yum.repos.d/CentOS-Stream-AppStream.repo \
+         /etc/yum.repos.d/CentOS-Stream-BaseOS.repo \
+         /etc/yum.repos.d/CentOS-Stream-Extras.repo \
+         /etc/yum.repos.d/CentOS-Stream-PowerTools.repo
